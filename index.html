@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    </head>
+    <body>
+        <head>
+            <h1>Rock Paper Scissors</h1>
+            <p class="subtitle">Do you have what it takes against your own computer?</p>
+        </head>
+
+        <div class="scoreboard">
+            <div class="score">
+                <div class="score-description">
+                    <p>Computer</p>
+                    <p class="com-score"></p>
+                </div>
+            </div>
+            <div class="score">
+                <div class="score-description">
+                    <p>You</p>
+                    <p class="player-score"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="play-area">
+            <div class="player computer">
+                <i class="com-choice"></i>
+                <i class="far fa-hand-rock fa-3x"></i>
+                <p>Computer chooses ...</p>
+            </div>
+            <div class="player person">
+                <i class="player-choice"></i>
+                <i class="far fa-hand-rock fa-3x"></i>
+                <p>Player chooses ...</p>
+                <div class="choice-btns">
+                    <button value="rock"><i class="far fa-hand-rock fa-lg"></i></button>
+                    <button value="paper"><i class="far fa-hand-paper fa-lg"></i></button>
+                    <button value="scissors"><i class="far fa-hand-scissors fa-lg"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script/script.js"></script>
+    </body>
+</html>
