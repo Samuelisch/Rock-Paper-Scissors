@@ -11,13 +11,24 @@
         <head>
             <h1>Rock Paper Scissors</h1>
             <p class="subtitle">Do you have what it takes against your own computer?</p>
+            <h3 class="counter">Best out of 5</h3>
         </head>
+
+        <div class="reset-game">
+            <button type='submit' class="submit-button">Replay game</button>
+        </div>
 
         <div class="scoreboard">
             <div class="score">
                 <div class="score-description">
                     <p>Computer</p>
                     <p class="com-score"></p>
+                </div>
+            </div>
+            <div>
+                <div class="score-description">
+                    <p class="round">Round</p>
+                    <p class="round-num"></p>
                 </div>
             </div>
             <div class="score">
@@ -30,18 +41,16 @@
 
         <div class="play-area">
             <div class="player computer">
-                <i class="com-choice"></i>
-                <i class="far fa-hand-rock fa-3x"></i>
+                <i id="com-choice" class="far fa-hand-rock fa-3x"></i>
                 <p>Computer chooses ...</p>
             </div>
             <div class="player person">
-                <i class="player-choice"></i>
-                <i class="far fa-hand-rock fa-3x"></i>
+                <i id="player-choice" class="far fa-hand-rock fa-3x"></i>
                 <p>Player chooses ...</p>
                 <div class="choice-btns">
-                    <button value="rock"><i class="far fa-hand-rock fa-lg"></i></button>
-                    <button value="paper"><i class="far fa-hand-paper fa-lg"></i></button>
-                    <button value="scissors"><i class="far fa-hand-scissors fa-lg"></i></button>
+                    <button value="rock"><i class="choice far fa-hand-rock fa-lg"></i></button>
+                    <button value="paper"><i class="choice far fa-hand-paper fa-lg"></i></button>
+                    <button value="scissors"><i class="choice far fa-hand-scissors fa-lg"></i></button>
                 </div>
             </div>
         </div>

@@ -1,5 +1,8 @@
 html {
     font-size: 10px;
+}
+
+body {
     font-family: Arial, Helvetica, sans-serif;
     color: rgb(19, 19, 19);
     background-color: rgb(145, 171, 194);
@@ -34,10 +37,15 @@ h1 {
     height: 10rem;
 }
 
+.round {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 .play-area {
     font-size: 1.8rem;
     max-width: 1000px;
-    margin:  5rem auto;
+    margin:  7rem auto;
     display: flex;
 }
 
@@ -60,4 +68,19 @@ button:hover {
 button:active {
     background-color:rgb(145, 171, 194);
     color: whitesmoke;
+}
+
+.submit-button {
+    display: none;
+    font-size: 2rem;
+    background-color: white;
+}
+
+.submit-button:hover {
+    background-color: red;
+    color: white;
+}
+
+.show-submit {
+    display: inline-block;
 }
