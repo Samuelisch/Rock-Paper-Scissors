@@ -11,7 +11,6 @@ const resultNum = document.querySelector('.round-num');
 resultNum.innerHTML = 1;
 
 const buttons = document.querySelectorAll('button');
-buttons.forEach(button => button.style.disabled = false);
 
 const refresh = document.querySelector('.submit-button');
 
@@ -93,7 +92,6 @@ function resetRound() {
             body.style.backgroundColor = 'rgb(145, 171, 194)';
             comHand.className = 'far fa-hand-rock fa-3x';
             playerHand.className= 'far fa-hand-rock fa-3x';
-            buttons.forEach(button => button.style.disabled = false);
             resultNum.innerHTML++;
         }
     }, 2000);
@@ -125,7 +123,14 @@ function playGame(e) {
 }
 
 function refreshPage() {
-    window.location.reload(); //refreshes page
+    refresh.classList.remove('show-submit');
+    comScore.innerHTML = 0;
+    playerScore.innerHTML = 0;
+    resultNum.innerHTML = 1;
+    result.innerHTML = 'Round';
+    body.style.backgroundColor = 'rgb(145, 171, 194)';
+    comHand.className = 'far fa-hand-rock fa-3x';
+    playerHand.className= 'far fa-hand-rock fa-3x';
 }
 
 playerChoice.forEach(button => {
