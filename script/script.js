@@ -3,12 +3,12 @@ const comHand = document.getElementById('com-choice');
 const playerHand = document.getElementById('player-choice');
 const playerChoice = document.querySelectorAll('.choice');
 const playerScore = document.querySelector('.player-score');
-playerScore.innerHTML = 0;
+playerScore.textContent = 0;
 const comScore = document.querySelector('.com-score');
-comScore.innerHTML = 0;
+comScore.textContent = 0;
 const result = document.querySelector('.round')
 const resultNum = document.querySelector('.round-num');
-resultNum.innerHTML = 1;
+resultNum.textContent = 1;
 
 const buttons = document.querySelectorAll('button');
 
@@ -71,14 +71,14 @@ function draw(com, player) {
 function lose(com, player) {
     body.style.backgroundColor = 'rgb(139, 36, 36)';
     showHands(com, player);
-    comScore.innerHTML++;
+    comScore.textContent++;
     resetRound();
 }
 
 function win(com, player) {
     body.style.backgroundColor = 'rgb(104, 199, 104)';
     showHands(com, player);
-    playerScore.innerHTML++;
+    playerScore.textContent++;
     resetRound();
 }
 
@@ -86,27 +86,27 @@ function resetRound() {
     console.log('Next round in 2 secs...')
     buttons.forEach(button => button.style.disabled = true);
     setTimeout(() => {
-        if (resultNum.innerHTML == 5) {
+        if (resultNum.textContent == 5) {
             endGame();
         } else {
             body.style.backgroundColor = 'rgb(145, 171, 194)';
             comHand.className = 'far fa-hand-rock fa-3x';
             playerHand.className= 'far fa-hand-rock fa-3x';
-            resultNum.innerHTML++;
+            resultNum.textContent++;
         }
     }, 2000);
 }
 
 function endGame() {
     refresh.classList.add('show-submit');
-    if (comScore.innerHTML > playerScore.innerHTML) {
-        result.innerHTML = 'YOU LOSE';
+    if (comScore.textContent > playerScore.textContent) {
+        result.textContent = 'YOU LOSE';
         body.style.backgroundColor = 'rgb(139, 36, 36)';
-    } else if (comScore.innerHTML < playerScore.innerHTML) {
-        result.innerHTML = 'YOU WIN';
+    } else if (comScore.textContent < playerScore.textContent) {
+        result.textContent = 'YOU WIN';
         body.style.backgroundColor = 'rgb(104, 199, 104)';
     } else {
-        result.innerHTML = 'DRAW';
+        result.textContent = 'DRAW';
         body.style.backgroundColor = 'whitesmoke';
     }
 }
@@ -124,10 +124,10 @@ function playGame(e) {
 
 function refreshPage() {
     refresh.classList.remove('show-submit');
-    comScore.innerHTML = 0;
-    playerScore.innerHTML = 0;
-    resultNum.innerHTML = 1;
-    result.innerHTML = 'Round';
+    comScore.textContent = 0;
+    playerScore.textContent = 0;
+    resultNum.textContent = 1;
+    result.textContent = 'Round';
     body.style.backgroundColor = 'rgb(145, 171, 194)';
     comHand.className = 'far fa-hand-rock fa-3x';
     playerHand.className= 'far fa-hand-rock fa-3x';
